@@ -1,0 +1,48 @@
+/* mystyle.css */
+
+/* mystyle.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 90%; /* Container width is responsive */
+    padding: 20px;
+}
+
+/* Styles for the main title */
+h1 {
+    font-size: 5em; /* Increase font size */
+    color: #4a90e2;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styles for the subtitle or paragraph text */
+p {
+    font-size: 1.8em; /* Slightly larger font size */
+    color: #333;
+}
+
+/* Styles for the image */
+img {
+    width: 100%; /* Now the image width is always 100% of the container */
+    max-width: 800px; /* Maximum size it should go */
+    height: auto;
+    border: 2px solid #4a90e2;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+canvas{
+	height:100 vh;
+	z-index:-10;
+	position: fixed;
+	top: 0px;
+}

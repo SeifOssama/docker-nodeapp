@@ -1,0 +1,33 @@
+version: "3"
+services:
+  node-app:
+    container_name: nodecontainer
+    build: .
+    volumes:
+      - G:\3-Tier-Web-Architecture\node-app:/app:ro
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+  
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - node-app
+
+  postgres:
+    image: postgres
+    restart: always
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: example
+
+
+volumes:
+  postgres-db:
