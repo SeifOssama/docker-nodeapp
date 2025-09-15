@@ -4,7 +4,8 @@ services:
     container_name: nodecontainer
     build: .
     volumes:
-      - ./src:/app/src:ro                                    
+      - ./src:/app/src:ro       
+      - /app/node_modules    # container manages its own node_modules                             
     ports:
       - "4000:4000"
     depends_on:
