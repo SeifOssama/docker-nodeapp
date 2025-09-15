@@ -4,7 +4,7 @@ services:
     container_name: nodecontainer
     build: .
     volumes:
-      - G:\3-Tier-Web-Architecture\node-app:/app:ro
+      - ./src:/app/src:ro                                    
     ports:
       - "4000:4000"
     depends_on:
