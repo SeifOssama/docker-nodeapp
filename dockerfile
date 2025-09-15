@@ -6,8 +6,6 @@ COPY package.json .
 
 RUN npm install
 
-# Ensure all node binaries are executable
-RUN chmod +x node_modules/.bin/*
 
 COPY . .
 
